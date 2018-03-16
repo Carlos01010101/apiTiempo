@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Principal</title>
+    <script type="text/javascript" src="./Chart.bundle.min.js"></script>
+    <script type='text/javascript' src='http://lalaguna.lasalle.es/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://lalaguna.lasalle.es/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script type='text/javascript' src="./cargaDatos.js"></script>
+    <script type='text/javascript' src="./cargaDatosGraficaDiaria.js"></script>
+    <script type='text/javascript' src="./cargaDatosGraficaSemanal.js"></script>
+    <script type='text/javascript' src="./cargaDatosGraficaMensual.js"></script>
+    <script type="text/javascript" src="./descargaCompleta.js"></script>
+  </head>
+  <body>
+    <div id="contenedor">
+      <div id="botonesGraficas">
+        <button type="button" name="dia" id="dia">Resumen dia anterior</button><button type="button" name="semana" id="semana">Resumen semanal</button>
+        <button type="button" name="mensual" id="mensual">Resumen mensual</button><button type="button" name="anual" id="anual">Resumen anual</button>
+      </div>
+      <div id="contendorPrincipalgraficas">
+        <div id="contenedorgraficaUno" >
+          <canvas id="graficaUno"></canvas>
+        </div>
+        <div id="contenedorgraficaDos"   >
+          <img id="imagen" width="40%" height="20%" src="./cargando.gif" alt="cargando"></img>
+          <canvas id="graficaDos"></canvas>
+        </div>
+        <div id="contenedorgraficaTres">
+          <canvas id="graficaTres"></canvas>
+        </div>
+        <div id="contenedorgraficaCinco">
+          <canvas id="graficaCinco"></canvas>
+        </div>
+        <div id="contenedorgraficaSeis">
+          <canvas id="graficaSeis"></canvas>
+        </div>
+      </div>
+      <div id="botonesTabla">
+        <button type="button" name="atras" id="atras">&lt; atrás</button><button type="button" name="adelante" id="adelante">adelante &gt;</button>
+      </div>
+          <table id="datos" border = 1px >
+            <thead>
+              <tr>
+                <th id='reading'>Fecha lectura</th>
+                <th id='station'>Estacion</th>
+                <th id='ground'>Temperatura</th>
+                <th id='air2'>Presión atmosférica</th>
+                <th id='humidity'>Humedad</th>
+                <th id='wind1'>Dirección viento</th>
+                <th id='wind2'>Velocidad viento</th>
+                <th id='rainfall'>lluvia</th>
+              </tr>
+            </thead>
+          </table>
+    </div>
+  </body>
+</html>
